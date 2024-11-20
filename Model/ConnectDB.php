@@ -1329,6 +1329,11 @@ class connectDB{
         }
         return count($registros_retorno) > 1 ? $registros_retorno : $registros_retorno[0];
     }
+
+    function a(){
+
+    }
+
     /**
      * @return int
      */
