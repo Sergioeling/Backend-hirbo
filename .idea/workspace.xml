@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="00f9342c-f39f-4f75-bcb7-1aca4892ac7d" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\xampp\php\php.exe">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+    </include_path>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2iyXsdnaOTMK9wKe1QvpwjmxNFh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.14808.18" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="00f9342c-f39f-4f75-bcb7-1aca4892ac7d" name="Changes" comment="" />
+      <created>1720463999082</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1720463999082</updated>
+      <workItem from="1720464000478" duration="3890000" />
+      <workItem from="1720468557493" duration="7635000" />
+      <workItem from="1720559811145" duration="40424000" />
+      <workItem from="1721058253158" duration="40544000" />
+      <workItem from="1721923920883" duration="12441000" />
+      <workItem from="1722445320565" duration="10015000" />
+      <workItem from="1723050458734" duration="37383000" />
+      <workItem from="1723479084137" duration="26064000" />
+      <workItem from="1723596372002" duration="11015000" />
+      <workItem from="1724103620820" duration="11669000" />
+      <workItem from="1724709813210" duration="13732000" />
+      <workItem from="1725033253944" duration="4467000" />
+      <workItem from="1725300354720" duration="13564000" />
+      <workItem from="1725919355496" duration="11447000" />
+      <workItem from="1726686783413" duration="620000" />
+      <workItem from="1726701858976" duration="77305000" />
+      <workItem from="1728502211126" duration="8189000" />
+      <workItem from="1728923392537" duration="22577000" />
+      <workItem from="1729720606734" duration="9269000" />
+      <workItem from="1730138607535" duration="31179000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/Model/ConnectDB.php</url>
+          <line>199</line>
+          <properties>
+            <option name="className" value="\connectDB" />
+            <option name="methodName" value="getQuestionsInterview" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/Model/ConnectDB.php</url>
+          <line>652</line>
+          <properties>
+            <option name="className" value="\connectDB" />
+            <option name="methodName" value="getValidCode" />
+          </properties>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/Model/ConnectDB.php</url>
+          <line>399</line>
+          <properties>
+            <option name="className" value="\connectDB" />
+            <option name="methodName" value="sendEmailGlobal" />
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/Model/ConnectDB.php</url>
+          <line>66</line>
+          <properties>
+            <option name="className" value="\connectDB" />
+            <option name="methodName" value="getOrganization" />
+          </properties>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/Model/ConnectDBmultimedia.php</url>
+          <line>454</line>
+          <properties>
+            <option name="className" value="\ConnectDBmultimedia" />
+            <option name="methodName" value="readFileFlijo" />
+          </properties>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/Model/ConnectDBmultimedia.php</url>
+          <line>208</line>
+          <properties>
+            <option name="className" value="\ConnectDBmultimedia" />
+            <option name="methodName" value="saveConfigWidjet" />
+          </properties>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php-line-method">
+          <url>file://$PROJECT_DIR$/Model/ConnectDBmultimedia.php</url>
+          <line>118</line>
+          <properties>
+            <option name="className" value="\ConnectDBmultimedia" />
+            <option name="methodName" value="saveEvento" />
+          </properties>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

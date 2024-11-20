@@ -1,0 +1,9 @@
+{
+    "require": {
+        "monolog/monolog": "^2.9",
+        "firebase/php-jwt": "^6.4",
+        "ext-mysqli": "*",
+        "ext-json": "*",
+        "ext-curl": "*"
+    }
+}

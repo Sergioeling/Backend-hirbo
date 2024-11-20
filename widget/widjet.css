@@ -1,0 +1,537 @@
+/* Spinner de carga widget */
+.loader 
+{
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #034f05;
+  border-radius: 50%;
+  width: 90px; /* Ancho del loader */
+  height: 90px; /* Alto del loader */
+  animation: spin 1s linear infinite;  
+  /* Centrar horizontal y verticalmente */
+  position: fixed; /* Permite que el loader permanezca fijo en la ventana  */
+  z-index: 99999999; /* Asegura que el loader esté por encima de otros elementos */
+  background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente opcional */
+  border-radius: 50%; /* Asegura que el fondo tenga bordes redondeados */
+}
+
+@keyframes spin 
+{
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.hidden 
+{
+  display: none;
+}
+/* Spinner de carga widget */
+
+
+#container 
+{
+  position: absolute;
+}
+
+.Hirbo-inicial 
+{
+  top: 80vh;
+  left: 92vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.532);
+  z-index: 10;
+}
+
+.Hirbo-componente-close
+{
+  min-height: 12vh;
+  width: 12vh;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  border: 5px solid transparent;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.532);
+  position: fixed;
+  z-index: 10;
+}
+
+div#Texto-inicial
+{
+  visibility: hidden;
+  background-color: #4CAF50 !important; /*Color de fondo mensaje*/
+  color: #FFF;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1000;
+  top: 115%;
+  left: 50%; 
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+  width: 7vw;
+  overflow-wrap: break-word;
+  font-size: 0.9em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.img-leader 
+{
+  width: 70%;
+  filter: drop-shadow(0 0 1.75px white);
+}
+
+.Boton-message
+{
+  position: absolute;
+  right: 2vh;
+  font-size: 1.3em;
+  top: 17px;
+}
+
+.Hirbo-componente-close:hover 
+{
+  transform: scale(1.2);
+}
+
+.Hirbo-componente-close:hover #Texto-inicial
+{
+  visibility: visible;
+  opacity: 1;
+}
+
+.Hirbo-esquina 
+{
+  width: auto;
+  max-width: 180px; /* Mantiene el ancho máximo */
+  height: auto; /* Mantiene la proporción */
+  position: fixed; /* Posición fija para que no se mueva */
+  top: 11.5vh; /* Mantiene la distancia desde la parte superior */
+  left: 90vw; /* Mantiene la distancia desde la parte izquierda */
+  transform: translate(-50%, -50%); /* Centra el elemento horizontalmente */
+  transition: transform 0.3s ease;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.26));
+  transform: rotate(0deg); /* Elimina el efecto de rotación */
+  z-index: 999999999; /* Mantiene el elemento por encima de otros */
+}
+
+.Hirbo-esquina img 
+{
+  width: auto; /* Hacer que la imagen ocupe el ancho del contenedor */
+  height: auto; /* Mantener la proporción */
+  object-fit: cover; /* Asegurar que la imagen cubra el espacio */
+}
+
+.Hirbo-esquina:hover {
+  transform: scale(1.08) rotate(0deg); /* Efecto de escalado al pasar el mouse */
+  cursor: pointer;
+}
+
+
+#Hirbo-link
+{
+  position: absolute;
+  margin-left: 1210px;
+  top: 18%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  position: fixed;
+  z-index: 10;
+  box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.227);
+}
+
+.overContainer:hover #Hirbo-link
+{
+  opacity: 1;
+  z-index: 99999999;
+}
+
+.overContainer:hover #Hirbo-link:hover 
+{
+  background-color: #034f05;
+  z-index: 999999;
+}
+
+.Hirbo-componente-open
+{
+  min-height: 40vh;
+  max-height: 55vh;
+  height: 100%;
+  position: fixed;
+  top: 25vh;
+  border-radius: 15px;
+  max-width: 25vw;
+  width: 100%;
+  right: 61px;
+  z-index: 999999;
+}
+
+.Hirbo-componente-open .message-container 
+{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scrollbar-color: #003d2c transparent;
+  min-height: 55vh;
+  max-height: 55vh;
+  border-left: 2px solid #c5c5c5;
+  border-right: 2px solid #c5c5c5;
+  background-color: #FFF;
+  text-align: left;
+}
+
+.Hirbo-componente-open .message-container .message {
+  position: relative;
+  max-width: 50%;
+  padding: 10px 10px;
+  margin: 8px 10px;
+  line-height: 1.4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.393);
+  opacity: 0;
+  transform: translateY(20px); /* Movimiento inicial para la animación */
+  animation: slideIn 1s ease forwards; /* Animación de entrada */
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #E1FFC7;
+  color: #565656;
+  border-radius: 50px;
+  left: 3%;
+}
+
+.Hirbo-componente-open .message-container .message::after {
+  content: '';
+  position: absolute; /* Asegúrate de que esto esté bien posicionado */
+  left: -19px;
+  top: 30%;
+  transform: translateY(-50%); /* Centrar verticalmente */
+  transform: scaleX(-1); /* Voltear horizontalmente */
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent #E1FFC7;
+  z-index: -1;
+}
+
+@keyframes slideIn 
+{
+  to 
+  {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+#send 
+{
+  padding: 1.6em !important; /* Usamos rem para hacer el padding relativo */
+  display: flex; 
+  align-items: center; /* Cambiamos align-content por align-items */
+  justify-content: center;
+  max-width: 100%; /* Aseguramos que no exceda el ancho del contenedor */
+  box-sizing: border-box; /* Incluimos el padding en el cálculo del ancho */
+}
+
+.Hirbo-componente-open .message-container .sent 
+{
+  align-self: flex-end; /* Alinear el mensaje a la derecha */
+  position: relative; /* Eliminar el 'fixed' y usar 'relative' para mantenerlo en el flujo del contenedor */
+  margin-right: 10px;
+  animation: slideUp 0.9s ease-out; /* Animación suave de subida */
+}
+
+.Hirbo-componente-open .message-container .sent::after 
+{
+  content: '';
+  position: absolute;
+  right: -19px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent transparent #E1FFC7;
+  z-index: -1;
+}
+
+@keyframes slideUp 
+{
+  from 
+  {
+    transform: translateY(50px); /* Inicia más abajo */
+    opacity: 0; /* Inicia invisible */
+  }
+
+  to 
+  {
+    transform: translateY(0); /* Se coloca en su posición final */
+    opacity: 1; /* Aparece completamente visible */
+  }
+}
+
+ 
+/*chat-display*/
+.Hirbo-componente-open .message-container .sent,
+.Hirbo-componente-open .message-container .received 
+{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #E1FFC7;
+  color: #565656;
+  border: none;
+  max-width:60%;
+  width: fit-content;
+  border-radius: 8px;
+  text-align: left;
+  z-index: 9999999;
+  padding: 0.55rem 0.75rem; /* Espaciado interno */
+  height: auto;
+  box-shadow: 1px 0px 8px  rgba(0, 0, 0, 0.393);
+  font-size: 14px;
+ 
+}
+
+
+/*message received  */
+.Hirbo-componente-open .message-container .received 
+{
+  position: relative;
+  margin-left: .6rem;
+  margin-top: .3rem;
+  margin-bottom: .3rem;
+
+}
+
+.Hirbo-componente-open .message-container .received::before 
+{
+  content: '';
+  position: absolute;
+  left: -20px; /* Ajustar según sea necesario */
+  top: 50%; /* Centrado vertical */
+  transform: translateY(-10%); /* Ajusta la posición hacia arriba */
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent #E1FFC7; /* Color de la flecha */
+}
+
+.Hirbo-componente-open .Cabecera-hirbo 
+{
+  border-radius: 15px 15px 0 0;
+  padding: 15px;
+  color: white;
+  z-index: 9999999999999;
+}
+
+.Hirbo-componente-open .sent
+{
+  border-radius: 0 0 15px 15px;
+  background: white;
+  height: 3vh;
+  border-left: 2px solid #c5c5c5;
+  border-right: 2px solid #c5c5c5;
+  border-bottom: 2px solid #c5c5c5;
+  border-top: 1px solid #c5c5c5;
+}
+
+.Hirbo-componente-open .sent .senting i 
+{
+  align-self: flex-end; /* Alinear el mensaje al lado derecho */
+  background-color: #D1E7FF; /* Cambia el color del fondo del mensaje */
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  max-width: 60%;
+  position: relative;
+  animation: slideUpRight 0.5s ease-out; /* Aplicar animación al enviar */
+}
+
+.Hirbo-componente-open .Boton-cerrar
+{
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  cursor: pointer;
+}
+
+.Hirbo-componente-open .sent button 
+{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Hirbo-componente-open .sent input 
+{
+  font-size: 1rem;
+}
+
+@keyframes sentAnimation 
+{
+  from 
+  {
+    transform: translateY(50%); /* Comienza desde más abajo */
+    opacity: 0; /* Oculto */
+  }
+
+  to 
+  {
+    transform: translateY(0); /* Termina en su posición original */
+    opacity: 1; /* Totalmente visible */
+  }
+}
+
+/*  ------------------------------------------------------------------------*/
+
+
+/* Estilo de for para el input de mensaje */
+#messageInput
+{
+  width: 100%; /* Cambiar el ancho a 100% para que se ajuste al contenedor */
+  max-width: 250px; /* Establecer un ancho máximo */
+  border-radius: 20px !important;
+  padding: 0.55rem 0.75rem; /* Espaciado interno */
+  margin-top: 0; /* Espaciado interno */
+  color: #495057; /* Color del texto */
+  background-color: #fff; /* Color de fondo */
+  border: 1px solid #ced4da; /* Color y estilo del borde */
+}
+
+#messageInput:focus 
+{
+  color: #495057; /* Color del texto al enfocar */
+  border-color: #007bff; /* Color del borde al enfocar (azul) */
+  outline: none; /* Eliminar el contorno predeterminado del navegador */
+  box-shadow: 0 0 5px rgb(165, 237, 255); /* Sombra azul */
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-width 0.15s ease-in-out; /* Transiciones suaves */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) 
+{
+  #messageInput
+  {
+    padding: 0.5rem; /* Reducir el padding en pantallas más pequeñas */
+    font-size: 12px; /* Tamaño de fuente más pequeño */
+  }
+}
+
+@media (max-width: 480px) 
+{
+  #messageInput 
+  {
+    padding: 0.4rem; /* Aún menos padding en móviles */
+    font-size: 10px; /* Tamaño de fuente más pequeño para móviles */
+  }
+}
+
+.rounded 
+{
+  border-radius: 50rem;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem; /* Cuando la orientación del texto es LTR (izquierda a derecha) */
+}
+
+#sendButton
+{
+  display: flex;
+  align-items: center;
+  background-color: #009dff; /* Color de fondo de Telegram */
+  border-radius: 50%; 
+  border: none;
+  padding: 10px 10px; 
+  font-size: 16px; 
+  cursor: pointer; 
+  transition: background-color 0.3s;
+  margin-top: 0px;
+  width: 40px;
+}
+
+#sendButton img 
+{
+  margin-right: 2px; 
+  width: 25px; 
+  height: 25px; 
+}
+
+#sendButton:hover 
+{
+  background-color: #3b95c2; 
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) 
+{
+  #sendButton-message
+  {
+    padding: 8px 8px; /* Menor espacio interno en pantallas más pequeñas */
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+  }
+
+  #sendButton-message img 
+  {
+    width: 20px; /* Tamaño de imagen más pequeño */
+    height: 20px; /* Tamaño de imagen más pequeño */
+  }
+
+  .rounded 
+  {
+    padding: 0.4rem 0.8rem; /* Ajuste de padding */
+  }
+}
+
+@media (max-width: 480px) 
+{
+  #sendButton-message
+  {
+    padding: 6px 6px; /* Espacio interno más reducido en móviles */
+    font-size: 12px; /* Aún más pequeño para móviles */
+  }
+
+  #sendButton-message img 
+  {
+    width: 18px; /* Tamaño de imagen aún más pequeño */
+    height: 18px; /* Tamaño de imagen aún más pequeño */
+  }
+
+  .rounded 
+  {
+    padding: 0.3rem 0.6rem; /* Ajuste de padding para pantallas muy pequeñas */
+  }
+}
+
+#Titulo-cabecera
+{
+  z-index: 99999999;
+  color:white;
+  margin: auto;
+}
+
+
+
+
+.no-bullets{
+  list-style-type:none;
+          padding: 0;          
+          margin: 0;   
+          margin-bottom: 5px; 
+}
