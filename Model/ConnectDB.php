@@ -1330,8 +1330,49 @@ class connectDB{
         return count($registros_retorno) > 1 ? $registros_retorno : $registros_retorno[0];
     }
 
-    function a(){
+    function getDataProfile($id, $type) {
+        mysqli_next_result($this->mysqli);
+        $query = "CALL sp_dataProfile('$id', '$type')";
+        $result = mysqli_query($this->mysqli, $query) or die(mysqli_error($this->mysqli));
+        
+        if (mysqli_num_rows($result) > 0) {
+            $this->setCode(200);
+            $data = $this->paramsReturn($result);
+    
+            if (mysqli_num_rows($result) == 1) {
+                $data = [$data];
+            }
+            
+            $this->setData($data);
+        }
+        
+        $this->closeSql();
+    }
 
+    function updateDataProfile($id, $type, $data) {
+        mysqli_next_result($this->mysqli);
+        
+        $nombre = $data['nombre'] ?? '';
+        $ap_paterno = $data['ap_paterno'] ?? '';
+        $ap_materno = $data['ap_materno'] ?? '';
+        $telefono = $data['telefono'] ?? '';
+        $email = $data['email'] ?? '';
+        $codigo_postal = $data['codigo_postal'] ?? '';
+        
+        $query = "CALL sp_updateProfile('$id', '$type', '$nombre', '$ap_paterno', '$ap_materno', '$telefono', '$email', '$codigo_postal')";
+        
+        $result = mysqli_query($this->mysqli, $query) or die(mysqli_error($this->mysqli));
+        
+        if (mysqli_num_rows($result) > 0) {
+            $this->setCode(200);
+            $data = $this->paramsReturn($result);
+            $this->setData($data);
+        } else {
+            $this->setCode(400);
+            $this->setData(['message' => 'No se pudo actualizar el perfil']);
+        }
+        
+        $this->closeSql();
     }
 
     /**

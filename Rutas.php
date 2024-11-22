@@ -260,6 +260,19 @@ if (!empty($funtion) && $connect->verificarToken()['code']== 200){
                 if ($helper->validParams($paramsPost, ['id']))
                     $connect->getProspectosOrg($paramsPost['id']);
             break;
+        case "dataProfile":
+                if ($helper->validParams($paramsPost,['id','type']))
+                    $connect->getDataProfile($paramsPost['id'],$paramsPost['type']);
+            break;
+        case "updateProfile":
+                if ($helper->validParams($paramsPost, ['id', 'type', 'data'])) {
+                    $connect->updateDataProfile(
+                    $paramsPost['id'], 
+                    $paramsPost['type'], 
+                    $paramsPost['data']
+                );
+            }
+        break;
     }
     if(sizeof($connect->getData())>0){
         $codigo = $connect->getCode();
