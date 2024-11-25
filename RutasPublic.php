@@ -82,6 +82,9 @@ if (isset($funtion)) {
             if ($helper->validParams($paramsPost, ['id']))
                 $connectMultimedia->getConfigWidjet($paramsPost['id']);
             break;
+        case "tipo_user_valor":
+                $connect->getTipoUserValor();
+            break;
         default:
             break;
     }

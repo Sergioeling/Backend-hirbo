@@ -118,6 +118,26 @@ class connectDB{
         }
         $this->closeSql();
     }
+
+    function getTipoUserValor() {
+        mysqli_next_result($this->mysqli);
+        $dta = mysqli_query($this->mysqli, "SELECT NOMBRE_TIPO_USER FROM `tbl_tipo_user` WHERE NOMBRE_TIPO_USER <> 'ROOT' AND NOMBRE_TIPO_USER <> 'ORGANIZACION'") or die(mysqli_error($this->mysqli));
+        mysqli_next_result($this->mysqli);
+        
+        if (mysqli_num_rows($dta) > 0) {
+            $resultArray = [];
+            while ($row = mysqli_fetch_assoc($dta)) {
+                $resultArray[] = $row['NOMBRE_TIPO_USER']; 
+            }
+            $this->setCode(200);
+            $this->setData($resultArray);
+        } else {
+            $this->setCode(404);
+            $this->setData([]);  
+        }
+        $this->closeSql();
+    }
+
     function  getDataInterview($idOrg)
     {
         mysqli_next_result($this->mysqli);
@@ -1358,8 +1378,9 @@ class connectDB{
         $telefono = $data['telefono'] ?? '';
         $email = $data['email'] ?? '';
         $codigo_postal = $data['codigo_postal'] ?? '';
+        $descripcion = $data ['descripcion'] ?? '';
         
-        $query = "CALL sp_updateProfile('$id', '$type', '$nombre', '$ap_paterno', '$ap_materno', '$telefono', '$email', '$codigo_postal')";
+        $query = "CALL sp_updateProfile('$id', '$type', '$nombre', '$ap_paterno', '$ap_materno', '$telefono', '$email', '$codigo_postal', '$descripcion')";
         
         $result = mysqli_query($this->mysqli, $query) or die(mysqli_error($this->mysqli));
         
